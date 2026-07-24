@@ -1,6 +1,6 @@
 "use strict";
 
-import { ArrowRight, Smartphone, Laptop, Sparkles, Smile, Award, CheckCircle, Headphones, Briefcase } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Portfolio() {
   const projects = [
@@ -59,14 +59,6 @@ export default function Portfolio() {
     },
   ];
 
-  const statItems = [
-    { num: "50+", label: "Projects Completed", icon: Briefcase },
-    { num: "30+", label: "Happy Clients", icon: Smile },
-    { num: "3+", label: "Years Experience", icon: Award },
-    { num: "100%", label: "Client Satisfaction", icon: CheckCircle },
-    { num: "24/7", label: "Support", icon: Headphones },
-  ];
-
   return (
     <section id="portfolio" className="portfolio-section">
       <div className="container">
@@ -97,10 +89,10 @@ export default function Portfolio() {
                   <div className="project-phone-screen">
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,0.05)", paddingBottom: "0.15rem" }}>
                       <span style={{ fontSize: "0.4rem", fontWeight: "bold", color: "#fff" }}>{project.mockupData.title}</span>
-                      <span style={{ fontSize: "0.35rem", color: "var(--text-muted)" }}>9:41</span>
+                      <span style={{ fontSize: "0.35rem", color: "var(--text-dark-muted)" }}>9:41</span>
                     </div>
                     <div style={{ height: "40px", borderRadius: "6px", background: `linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))`, border: "1px solid rgba(255,255,255,0.05)", padding: "0.2rem", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                      <span style={{ fontSize: "0.3rem", color: "var(--text-muted)" }}>Active Users</span>
+                      <span style={{ fontSize: "0.3rem", color: "var(--text-dark-muted)" }}>Active Users</span>
                       <span style={{ fontSize: "0.55rem", fontWeight: "bold", color: project.mockupData.accent || "#fff" }}>4.8k</span>
                     </div>
                     <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "0.15rem" }}>
@@ -120,12 +112,12 @@ export default function Portfolio() {
                       <span style={{ width: "3px", height: "3px", borderRadius: "50%", background: "#ef4444" }}></span>
                       <span style={{ width: "3px", height: "3px", borderRadius: "50%", background: "#eab308" }}></span>
                       <span style={{ width: "3px", height: "3px", borderRadius: "50%", background: "#22c55e" }}></span>
-                      <span style={{ fontSize: "0.35rem", color: "var(--text-muted)", marginLeft: "0.5rem" }}>{project.mockupData.title}</span>
+                      <span style={{ fontSize: "0.35rem", color: "var(--text-dark-muted)", marginLeft: "0.5rem" }}>{project.mockupData.title}</span>
                     </div>
                     <div style={{ padding: "0.4rem", display: "flex", flexDirection: "column", gap: "0.3rem", height: "100%" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                         <span style={{ fontSize: "0.5rem", fontWeight: "bold", color: "#fff" }}>Digital Platform</span>
-                        <span style={{ fontSize: "0.35rem", color: "var(--text-muted)" }}>Menu ▼</span>
+                        <span style={{ fontSize: "0.35rem", color: "var(--text-dark-muted)" }}>Menu ▼</span>
                       </div>
                       <div style={{ flex: 1, background: "rgba(255,255,255,0.02)", border: "1px dashed rgba(255,255,255,0.1)", borderRadius: "4px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <span style={{ fontSize: "0.4rem", color: project.mockupData.accent }}>Web Design Live</span>
@@ -144,22 +136,6 @@ export default function Portfolio() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Bottom Statistics Counter Panel */}
-        <div className="stats-panel">
-          {statItems.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <div key={index} className="panel-stat-item">
-                <div className="panel-stat-icon">
-                  <Icon size={24} />
-                </div>
-                <span className="panel-stat-num">{item.num}</span>
-                <span className="panel-stat-label">{item.label}</span>
-              </div>
-            );
-          })}
         </div>
       </div>
     </section>
